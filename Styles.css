@@ -1,0 +1,120 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+  font-family: tahoma;
+  background-color: hsl(0, 0%, 98%);
+  Font-size: 15px
+  box-sizing: border-box;
+}
+ /* Header */
+header {
+  margin: 40px 15px;
+  text-align: center;
+}
+
+header h5 {
+  font-size: 1.5em;
+  font-weight:normal;
+}
+
+header p {
+  font-size: 1.1em;
+}
+
+header > h5 > span {
+  font-weight: bold;
+}
+
+/* Card */
+
+.card {
+  max-width: 300px;
+  margin: 20px auto;
+}
+
+.card h5 {
+  font-size: 1.2em;
+  margin-bottom: 0px;
+  margin-top: 13px;
+  color: hsl(234, 12%, 34%);
+}
+
+.card  p {
+  margin-top: 3px;
+  font-size: .9rem;
+}
+
+.card .cardcontent {
+  height: 180px;
+  border: 1px solid white;
+  padding: 10px;
+  margin: 15px auto;
+  border-radius: 10px;
+  box-shadow: 0px 0px 15px hsl(229, 6%, 66%);
+}
+
+
+.card .cardcontent img {
+  width: 18%;
+  margin-top: 34px;
+  float: right;
+}
+
+.card .cardcontent.one {
+  border-top: 5px solid cyan;
+}
+.card .cardcontent.two {
+  border-top: 5px solid red;
+}
+.card .cardcontent.three {
+  border-top: 5px solid orange;
+}
+.card .cardcontent.four {
+  border-top: 5px solid blue;
+}
+
+
+/* MEDIA QUERIES  */
+@media ( min-width: 600px ) {
+  
+  header {
+    font-size: 1.7em;
+  }
+  .card  {
+    display: grid;
+    max-width: 1440px;
+    grid-template-columns: repeat(5, 300px);
+    grid-template-rows: repeat(5, 230px);
+    column-gap: 30px;
+    
+  }
+  
+  .card .cardcontent.one {
+    grid-row: 3 / 4;
+    grid-column: 1 / 2;
+    
+  }
+  
+  .card .cardcontent.two {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    transform: translateY(-120px);
+  }
+  
+  .card .cardcontent.three {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+    transform: translateY(120px);
+  }
+  
+  .card .cardcontent.four {
+    grid-column: 3 / 4;
+    grid-row: 3 / 4;
+  }
+  
+ footer .attribution {
+    font-size: 30px;
+  }
+  
+}
